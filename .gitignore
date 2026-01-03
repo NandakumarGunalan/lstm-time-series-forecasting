@@ -1,4 +1,22 @@
-.venv
+# Virtual environments
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
+
+# OS files
 .DS_Store
+
+# Data
+data/
+
+# Model artifacts
+experiments/lstm_model/
+
+# Logs (future-proofing)
+*.log
+
+# Serialized Keras models
+*.keras
+*.h5
