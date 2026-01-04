@@ -1,10 +1,15 @@
-## Baseline Results
+## Results
 
-Dataset: Jena Climate (scaled using train-only statistics)
+### Dataset
+- Jena Climate (scaled using train-only statistics)
+- Window: 72, Horizon: 1, Target col: 0
 
-Naive last-value predictor (window=72, horizon=1):
+### Test Metrics
+| Model | MAE | RMSE |
+|---|---:|---:|
+| Naive last-value | 0.0084 | 0.0122 |
+| LSTM | 0.1644 | 0.2094 |
 
-- MAE: 0.0084
-- RMSE: 0.0122
-
-This baseline serves as a lower bound for LSTM performance.
+Notes:
+- Naive is a strong baseline for short-horizon forecasting.
+- LSTM should beat naive if it learns temporal patterns beyond last value.
